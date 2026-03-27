@@ -10,6 +10,7 @@ class CsvLoader:
         csv_files = list(raw_dir.glob("*.csv"))
         if not csv_files:
             raise FileNotFoundError(f"Không tìm thấy file .csv nào trong thư mục: {raw_dir}")
+        print(f"Load file csv đầu tiên tìm thấy")
         self.csv_path = csv_files[0]
 
     def load_messages(self):

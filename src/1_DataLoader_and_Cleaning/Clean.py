@@ -59,7 +59,7 @@ def save_cleaned_emails_to_excel(df_cleaned, filename="cleaned_emails.xlsx"):
     return excel_path
 
 if __name__ == "__main__":
-    loader = CsvLoader(1500, 42)
+    loader = CsvLoader(700, 42)
     raw_series = loader.load_messages()
     df_final = cleandata(raw_series)
     save_cleaned_emails_to_excel(df_final)
